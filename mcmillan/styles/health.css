@@ -1,0 +1,27 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.health{
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.health h2{
+  text-align: center;
+  color: rgb(0, 132, 255);
+}
+.health p, .health h2{
+  margin-bottom: 20px;
+}
+
+.health p{
+  text-align: justify;
+  color: #333;
+} .health h4{
+  color: #666;
+}

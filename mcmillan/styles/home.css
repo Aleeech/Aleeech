@@ -1,0 +1,323 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+}
+/* INSERT NORMALISE FORMATIONG HERE FOR PREFERENSES */
+header{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 50px;
+  text-transform: capitalize;
+  overflow: hidden;
+}
+#hanburger{
+  width: 40px; height: 30px;
+  cursor: pointer;
+  display: none;
+  position: relative;
+}
+#hanburger .bar, #hanburger .bar::before, #hanburger .bar::after{
+  width: 2em; height: 2.5px;
+  background: rgb(0,132,255);
+  transition: transform 200ms ease-in-out
+}
+#hanburger .bar{
+  position:absolute;
+  top: 50%;
+  /* position: relative; */
+}
+#hanburger .bar::before, #hanburger .bar::after{
+  content: '';
+  position: absolute;
+}
+#hanburger .bar::before{
+  bottom: 8px;
+  background: red;
+}
+#hanburger .bar::after{
+  background: green;
+  top: 8px;
+}
+header h2{
+  font-size: 1rem;
+  color: #333;
+}
+header h2 span{ color: #ff3838}
+header h2 i{ color: rgb(0, 132, 255)}
+
+
+header ul li {
+  display: block;
+  float: left;
+  list-style: none;
+}
+header ul li a{
+  font-size: 14px;
+  padding: 20px 10px;
+  font-weight: 600;
+  color: #555;
+}
+@media (max-width: 940px){
+  header h2{
+    font-size: .9rem;
+  }
+  header ul li a{
+    font-size: .6rem;
+    font-weight: 700;
+    padding: 20px 5px;
+  }
+}
+@media (max-width: 700px){
+  #hanburger{
+    display: block;
+    position: absolute;
+    top: 10px; right: 10px;
+  }
+  header{justify-content: left; padding: 10px 1rem}
+  header h2{font-size: 1.2rem}
+  header ul{
+    position: absolute;
+    top: 50px; right: 0;
+    transform-origin: top;
+    background-color: #ccc;
+    padding: .15rem 1rem;
+    transform: scaleY(0);
+    opacity: 0;
+    transition: transform 200ms ease-in-out;
+  }
+  .nav-open #hanburger .bar{
+      transform: rotate(.625turn)
+  }
+  .nav-open #hanburger .bar::before{
+      transform: rotate(90deg) translate(8px)
+  }
+  .nav-open #hanburger .bar::after{
+    opacity: 0
+  }
+  .nav-open header ul{
+    transform: scaleY(1);
+    opacity: 1;}
+  header ul li{
+    display: inline-block;
+    float: none;
+    width: 100%;
+    border-left: 4px solid #ff3838;
+    margin: .2rem;
+    background: #ddd
+  }
+  header ul li:last-child{
+    border: none;
+    display: block!important;
+    text-align: center;background: #ff3838;
+    padding: .6rem;
+    font-weight: bold;
+    color: rgb(0, 132, 255)
+  }
+  header ul li a{
+    display: block;
+    padding: 1rem;
+    width: 100%;;
+    font-size: 1rem;
+  }
+}
+header ul li:last-child{
+  border: none;
+  display: none;
+}
+header ul li a:hover{
+  background: rgb(0, 132, 255);
+  color: #fff;
+}
+/*----Banner----*/
+section{width: 800px; margin: 0 auto}
+@media (max-width: 1000px){section{width: 100%}}
+@media (max-width: 1345px){.banner,.sold-pops{width: 100%!important}}
+
+.banner, .sold-pops{
+  width: 1345px;
+}
+.banner{
+  min-height: calc(100vh - 60px);
+  background-color:rgb(0, 132, 255);
+  background-color: #333;
+  background-image: url("../media/images/cred.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: screen;
+  padding: 20px 50px;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.banner h3, .banner .pops, .span {
+  margin: 1rem;}
+.banner .content{
+  width: 55%;
+}
+.banner h3{
+  color: #333;
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.banner .pops{
+  background-color:rgb(255, 153, 0);
+  border-radius: 30px;
+  padding: 10px 20px;
+  color: rgb(0, 132, 255);
+  font-weight: bold;
+}
+.banner .pops:hover{
+  background: rgba(255, 153, 0, 0.514);
+  color: white;
+}
+.header-intro{
+  min-height: 80vh;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+.header-intro h3{
+  padding: 20px 0;
+  font-size: 24px;
+}
+/*-----why choose us-----*/
+.why-us{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.why-us .content{
+  width: 50%;
+  margin-right: 20px
+}
+.why-us .content h3{
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.why-us .content ul{
+  margin-left: 20px;
+  font-size: 14px;
+  text-align: justify;
+}
+.why-us .content ul li{
+  margin-bottom: 10px;
+}
+.why-us .content ul span{
+  font-weight: bold;
+}
+.why-us .image{
+  width: 40%;
+  height: 100%;
+}
+.why-us .image img{
+  width: 80%;
+  height: 80%;
+}
+
+/*---Sold---*/
+.sold-container{
+  text-align: center;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.copy-one{
+  margin-top: 1rem;
+  margin-left: 20px;
+  max-width: 48%;
+  border: 2px solid grey;
+  box-shadow: 0 0.25rem 1rem rgba(0,0,0,0.4);
+  border-radius: 1rem;
+  padding: 2px;
+  padding-bottom: 20px;
+}
+.copy-one .gallery img{
+  width: 45%;
+  border-radius: 10%;
+}
+.sold-container ul{
+  margin-bottom: 50px;
+}
+.sold-container ul li{
+  list-style: none;
+  font-size: 20px;
+  color: #333;
+  font-weight: 400;
+}
+.sold-container ul li:last-child{
+  margin-top: 30px;
+}
+.sold-container ul li a, .available{
+  padding: 10px 20px;
+  background: rgb(0, 132, 255);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 2px;
+}
+.sold-container ul li a:hover, .available:hover{
+  background: rgb(2, 72, 138)
+}
+.available{
+  animation: glow 2s ease-in-out infinite alternate
+}
+@keyframes glow{
+  from{background: rgba(2, 72, 138, .7)}
+  to{background: rgba(251, 255, 0, 0.74)}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----footer-----*/
+footer{
+  margin-top: 100px;
+}
+.copyright{
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  color: #444;
+  background: #111;
+}
+@media (max-width: 800px){
+  .banner .content{
+    width: 90%;
+    text-shadow: 0 0 .5rem black;
+  }
+  .why-us{
+    flex-direction: column;
+    padding: 10px;
+  }
+  .why-us .content{
+    width: 85%;
+    margin-right:.8rem;
+    order: 2;
+  }
+}
+
