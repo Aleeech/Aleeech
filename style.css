@@ -1,0 +1,132 @@
+*{
+  margin: 0; padding: 0; box-sizing:border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+header{
+  width: 100%;
+  height: 50px;
+  background: #264cf3;
+  border-bottom-right-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+.logo div{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: cyan;
+  outline: 1px solid #fc9b9b;
+  outline-offset: 2px;
+  margin-right: 10px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: fantasy;
+  color: #fc9b9b
+}
+nav{
+  transition: transform 300ms ease;
+}
+nav ul li{
+  display: inline-block;
+}
+nav ul li a{
+  text-decoration: none;
+  color: #ccc;
+  font-weight: 500;
+  padding: .5rem;
+  display: block
+}
+nav ul li a:hover{color: #fff; background-color: cyan}
+.burger{
+  cursor: pointer;
+  width: 50px; height: 50px;
+  padding-top: 10px; 
+  padding-left: 5px;
+  border-radius:50%;
+  display: none;
+}
+.burger:hover{
+    background: #e6e6e644
+  }
+.element{
+  position: relative;
+}
+.burger .element, .element::before, .element::after{
+  background: rgb(0, 255, 255);
+  width: 40px; height: 5px;
+  border-radius: 5px;
+}
+.element::before, .element::after{content: ''; position: absolute}
+.element::before{
+  top: 10px; left: 0;
+  background: red;
+}
+.element::after{
+  top: 20px; left: 0;
+}
+.nav-open{
+  opacity: 1;
+  transform: scaleY(1)
+}
+
+section{
+  width: 768px;
+  padding: 1rem;
+  margin: 0 auto;
+  background-color: #383838;
+  color: #fff;
+  text-align: center;
+}
+h2{
+  margin: 0 auto;
+  /* display: block; */
+  font-weight: 700;
+  letter-spacing: 3px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #ff3838;
+  outline: 2px solid #fff;
+  outline-offset: .5rem;
+  line-height: 200px;
+
+}
+h1{
+  text-transform: uppercase;
+  margin: 2rem 0;
+  background-color: #264cf3;
+}
+section img{
+  width: 200px;
+}
+@media(max-width: 768px){
+  section{
+    width: 100%;
+  }
+}
+@media (max-width: 411px){
+  .burger{display: block}
+  nav{
+    position: absolute;
+    top: 50px; right: 0;
+    width: 100%;
+    transform-origin: top;
+    opacity: 0;
+    transform: scaleY(0)
+  }
+  nav ul li{
+    display: block;
+    height: 50px;
+    background: #383838;
+    border-bottom: 2px solid rgb(192, 252, 244);
+    border-left: 5px solid rgb(192, 252, 244);
+    padding-left: 3rem;
+    font-size: 1.2rem;
+  }
+}
+
