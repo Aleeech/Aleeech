@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>contact</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/8ea543231b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <a href="../../index.html">HOME</a>
+  <section class="contact-section">
+    <h2 class="title">Gitflow CG Contact Information</h2>
+    <div class="contact-content">
+      <div class="contact-infor">
+        <div class="inforbox">
+          <span class="fass"><i class="fas fa-envelope"></i></span>
+          <span class="description"><strong>Email</strong> <em>leeleslyank@gmail.com</em></span>
+        </div>
+        <div class="inforbox">
+          <span class="fass"><i class="fas fa-phone-alt"></i></span>
+          <span class="description"><strong>Phone</strong> <em>+237 670600100</em></span>
+        </div>
+        <div class="inforbox">
+          <span class="fass"><i class="fas fa-location-arrow"></i></span>
+          <span class="description"><strong>Address</strong> <em>Bamenda - Bambili <br> Cameroon -- 00000</em></span>
+        </div>
+        <div class="social-links">
+          <h3 id="socialM">social media</h3>
+          <div class="con-tainer">            
+            <div class="fass"><i class="fab fa-facebook-f"></i></div>
+            <div class="fass"><i class="fab fa-instagram"></i></div>
+            <div class="fass"><i class="fab fa-whatsapp"></i></div>
+            <div class="fass"><i class="fab fa-linkedin-in"></i></div>
+            <h3 id="social-point">@Git_flow_CG</h3>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="contactform">
+        <form name="Contact-Form" netlify-honeypot="bot-field" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="Contact-Form">
+          <label>
+            Don’t fill this out if you’re human: <input name="bot-field" />
+          </label>
+          <div class="caption">
+            <h3>Send a mail</h3>
+            <div class="choose-option">
+              <label for="cat">Category-</label>
+              <select name="Category" id="cat">
+                <option value="none">none</option>
+                <option value="developer">Developer</option>
+                <option value="visitor">Visitor</option>
+                <option value="client">Client</option>
+                <option value="others">others</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-data">
+            <div class="form-fields w-50">
+              <span>Name</span> <br>
+              <input type="text" name="User-name" required>
+            </div>
+            <div class="form-fields w-50">
+              <span>Email address</span> <br>
+              <input type="email" name="Email-address" required>
+            </div>
+            <div class="form-fields w-50">
+              <span>Phone</span> <br>
+              <input type="text" name="Phone-number" required>
+            </div>
+            <div class="form-fields w-50">
+              <span>Message topic</span> <br>
+              <input type="text" name="Message-topic" required>
+            </div>
+            <div class="form-fields w-100">
+              <span>Message</span> <br>
+              <textarea name="Message-body" placeholder="Enter message here..." id="" cols="30" rows="10" required></textarea>
+            </div>
+            <div class="form-submit-btn">
+              <button type="submit">Send mail</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

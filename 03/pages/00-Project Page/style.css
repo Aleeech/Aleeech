@@ -1,0 +1,218 @@
+/*Custom properties, update these for your new design*/
+
+@font-face {
+  font-family: pops;
+  src: url(../../fonts/Poppins/Poppins-Light.ttf)
+}
+@font-face {
+  font-family: monos;
+  src: url(../../fonts/Major_Mono_Display/MajorMonoDisplay-Regular.ttf)
+}
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box
+}
+
+
+:root{
+  --ff-primary: pops;
+  --ff-seconday:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  --fw-reg: 300;
+  --fw-bold: 900;
+
+  --clr-light: #fff;
+  --clr-dark: #383838;
+  --clr-blue: #00a2ff;
+  --clr-accent: #36e8bd;
+  --clr-test: rgba(250,0,0,0.25);
+  --clr-bg: #ccc;
+
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-reg: 1rem;
+
+  --bs: 0.25em 0.25em 0.75em rgba(0,0,0,0.25),
+        0.125em 0.125em 0.25em rgba(0,0,0,0.15);
+}
+:focus{
+  outline: 3px solid var(--clr-accent);
+  outline-offset: 3px;
+}
+
+@media (max-width: 800px){
+  :root{
+    --fs-h1: 2.2rem;
+    --fs-h2: 1.8rem;
+    --fs-h3: 1.2rem;
+    --fs-reg: 1rem;
+  }
+}
+
+html{
+  font-size: 100% /*62.5*/;
+  /* overflow-x: hidden; */
+  scroll-behavior: smooth;
+  scroll-padding: 6rem;
+}
+body{
+  background: var(--clr-light);
+  color: var(--clr-dark);
+  margin: 0;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-reg);
+  line-height: 1.6;
+}
+img{
+  display: block;
+  max-width: 100%;
+  box-shadow: var(--bs);
+}
+
+h1,
+h2,
+h3,
+h5,
+p{
+  line-height: 1.1;
+  margin: 0;
+}
+h1{font-size: var(--fs-h1)}
+h2{font-size: var(--fs-h2)}
+h3{font-size: var(--fs-h3)}
+
+
+:root{
+  --clr-light: #383838;
+  --clr-dark: #fff
+}
+/*Design starts*/
+.projects{
+  background-image: url(./SVG-bg.svg);
+  background-position: center;
+  background-size: 100px;
+  text-align: center;
+}
+.projects h1{
+  text-transform: uppercase;
+  font-family: monos;margin: 2rem;
+  letter-spacing: 2px;
+}
+.projects p{
+  margin-top: 2rem;
+  padding: 1rem;
+  background: var(--clr-accent);
+  font-weight: 700;
+  color: #383838
+}
+
+.p-container{
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+@media (max-width: 1200px){
+  .p-container{width: 100%}
+}
+.p-container .project{
+  width: 200px;
+  border: 2px solid var(--clr-accent);
+  border-radius: 10px;
+  position: relative;
+  box-shadow: -0.25rem 0rem 2rem var(--clr-accent);
+  margin: 1rem;
+}
+.p-container .project span{
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--clr-light);
+  outline: 3px solid var(--clr-blue);
+  outline-offset: 3px;
+  background: var(--clr-dark);
+  position: absolute;
+  top: -20px; left: -20px;
+  color: var(--clr-blue);
+  padding-top: 5px;
+  font-weight: bold;
+}
+.p-container .project .title{
+  margin-top: 10px;
+  background: var(--clr-blue);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  padding: 0.5rem 0;
+}
+.p-container .project i{
+  width: 100px; height: 100px;
+  background: var(--clr-blue);
+  border-radius: 50%;
+  color: var(--clr-dark);
+  line-height: 100px;
+  font-size: calc( var(--fs-h1) + 0.5rem);
+  margin-top: 0.5rem;
+}
+.p-container .project .description{
+  font-size: .8rem;
+  margin-top: .5rem;
+  padding: .5rem 0;
+}
+.p-container .project h5{
+  font-size: .7rem;
+}
+.p-container .project strong{
+  padding: 0 1px;
+  font-size: 1rem
+}
+
+.progress-bar{
+  background: var(--clr-dark);
+  color: var(--clr-light);padding: .5rem 0;
+  font-size: .8rem;
+  letter-spacing: 2px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-around; 
+}
+.progress-bar .bar{
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  width: 100px; height: 5px;
+  background: #706f6f;
+  position: relative;
+  overflow: hidden;
+}
+/* access as inline syles */
+:root{
+  --progress: 30%
+}
+.progress-bar .bar::before{
+  content:'';
+  position: absolute;
+  top: 0; left: 0;
+  width: var(--progress); height: 101%;
+  background: var(--clr-blue);
+}
+/* 
+.boxing-backgrounddd{
+  /* background: red;  
+  width: calc(100% + 500px);
+  height: 100vh;
+  position: fixed;
+  top: 0; left: 0;
+  z-index: -100;
+} */
+
+
+
+

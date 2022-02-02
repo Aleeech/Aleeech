@@ -1,0 +1,497 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+pre {font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+a {
+  background-color: transparent;
+  cursor: pointer;
+}
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+b,
+strong {
+  font-weight: bolder;
+}
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+button,
+input { /* 1 */
+  overflow: visible;
+}
+button,
+select { /* 1 */
+  text-transform: none;
+}
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+progress {
+  vertical-align: baseline;
+}
+textarea {
+  overflow: auto;
+}
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+/* Interactive
+========================================================================== */
+s {
+  display: block;
+}
+summary {
+  display: list-item;
+}
+/* Misc
+========================================================================== */
+
+template,
+[hidden] {
+  display: none;
+}
+
+/*** The new CSS Reset - version 1.4.4 (last updated 22.12.2021) ***/
+/*
+Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+- The "symbol *" part is to solve Firefox SVG sprite bug
+*/
+*:where(:not(iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+ol, ul, menu {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
+table {
+  border-collapse: collapse;
+}
+textarea {
+  white-space: revert;
+}
+:where([hidden]){
+  display:none;
+}
+:where([contenteditable]){
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  /* -webkit-line-break: after-white-space; */
+}
+:where([draggable="true"]) {
+  -webkit-user-drag: element;
+}
+
+/** Custom style sheet **/
+/*Custom properties, update these for your new design*/
+*,
+*::before,
+*::after{
+  box-sizing: border-box
+}
+
+
+:root{
+  --ff-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --ff-seconday: Georgia, 'Times New Roman', Times, serif;
+
+  --fw-reg: 300;
+  --fw-bold: 900;
+
+  --clr-light: #fff;
+  --clr-dark: #383838;
+  --clr-yellow: #fff200;
+  --clr-accent: #36e8bd;
+  --clr-red: #ff3838;
+  --clr-blue: #00a2ff;
+  /* --clr-dark2: #1d1717e5; */
+  /* --clr-test: #fa000040; */
+  /* --clr-grey: grey; */
+
+  /* gradient */
+  --gd: linear-gradient(to right, #00093c, #2d0b00);
+
+  --fs-h1: 3rem;
+  --fs-h2: 2rem;
+  --fs-h3: 1.3rem;
+  --fs-reg: 1rem;
+
+  --bs: 0.25em 0.25em 0.75em rgba(0,0,0,0.25),
+        0.125em 0.125em 0.25em rgba(0,0,0,0.15);
+  /* --abs: 0 .4rem 0.8rem rgba(0, 0, 0, 0.4); */
+}
+[data-newTheme="dark"]{
+  --clr-light: #383838;
+  --clr-dark: #fff;
+}
+
+html{
+  font-size: 100% /*62.5%*/;
+  /* overflow-x: hidden; */
+  scroll-behavior: smooth;
+  scroll-padding: 6rem;
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+.allBg{
+  background: var(--clr-dark);
+  color: #fff;
+}
+
+body{
+  background-color: var(--clr-light);
+  color: var(--clr-dark);
+  margin: 0;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-reg);
+  line-height: 1.6;
+}
+img{
+  display: block;
+  max-width: 100%;
+  box-shadow: var(--bs);
+  border-style: none;
+}
+main {
+  display: block;
+}
+h2,
+h3{
+  line-height: 1;
+  margin: 0;
+}
+h1 {margin: 0.67em 0;}
+
+h1{font-size: var(--fs-h1)}
+h2{font-size: var(--fs-h2)}
+h3{font-size: var(--fs-h3)}
+p{font-size: var(--fs-reg)}
+
+:focus{
+  outline: 3px solid var(--clr-accent);
+  outline-offset: 3px;
+}
+
+@media (max-width: 700px){
+  :root{
+    --fs-h1:2.8rem;
+    --fs-h2: 1.8rem;
+    --fs-h3: 1rem;
+    --fs-reg: 0.8rem;
+  }
+}
+/* @media (max-width: 700px){
+  :root{
+    --fs-h1: 4.5rem;
+    --fs-h2: 3.25rem;
+    --fs-h3: 1.5rem;
+    --fs-reg: 1.12rem;
+  }
+} */
+section{
+  width: 1050px;
+  padding: 3rem 2rem;
+  margin: 0 auto;
+}
+/*section Res Des*/
+@media (max-width: 1050px){
+  section{width: 90%;} 
+}
+@media (max-width: 700px){
+  section{width: 100%}
+}
+*::selection{
+  background: var(--clr-red);
+  color: #fff;
+}
+a{
+  box-shadow: var(--bs);
+  color: blue
+}
+@font-face {
+  font-family: fone;
+  src: url(../../fonts/Anton/Anton-Regular.ttf);
+}
+@font-face {
+  font-family: ftwo;
+  src: url(../../fonts/Krona_One/KronaOne-Regular.ttf);
+}
+@font-face {
+  font-family: fthree;
+  src: url(../../fonts/Major_Mono_Display/MajorMonoDisplay-Regular.ttf);
+}
+@font-face {
+  font-family: ffour;
+  src: url(../../fonts/Poppins/Poppins-Medium.ttf);
+}
+/** DESIGN STARTES HERE **/
+
+/*DEsign STarts*/
+.contact-section{
+  padding: 0;
+  width: 100%;min-height: 100vh;
+  display: flex; align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(77, 77, 77)
+}
+.contact-section h2{
+  color: #fff;
+  margin: 1rem;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: var(--bs);
+}
+.contact-section .contact-content{
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  align-items: center;
+}
+.contact-infor{
+  width: 40%;
+}
+.contact-infor .inforbox{
+  padding: .5rem;
+  padding-left: 2rem;
+  background: rgb(65, 65, 65);
+  margin: 0.15rem;
+  display: flex;
+  height: 100px;
+}
+.contact-infor .fass{
+  width: 35px; height: 35px;
+  text-align: center;
+  border-radius: 50%;
+  color: var(--clr-blue);
+  line-height: 35px;
+  margin-right: 20px;
+  font-size: 1rem;
+}
+.contact-infor .social-links{
+  height: 100px;
+  background: rgb(65, 65, 65);
+}
+.contact-infor .social-links .con-tainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: .5rem 0;
+  flex-wrap: wrap;
+}
+.contact-infor .social-links .con-tainer .fass{
+  display: inline-block;
+  font-size: 1.35rem;
+  background-color: var(--clr-blue);
+  color: #383838;
+  transition: 100ms ease-in-out;
+}
+#socialM{font-family: ftwo;}
+.contact-infor .social-links .fass:hover{
+  color: var(--clr-blue);
+  background-color: rgb(77, 77, 77)
+}
+#social-point{width: 100%; margin-top: 0.8rem;}
+.contact-infor .social-links .fass:hover ~ h3{color: var(--clr-accent);}
+.contact-infor .social-links h3{
+  color: var(--clr-blue); 
+  text-align: center; 
+  font-weight: 500;
+  font-size: .8rem
+}
+.contact-infor .inforbox .description strong{
+  color: #fff;
+  font-weight: 400;
+  font-family: ftwo;
+  letter-spacing: 1px;
+  font-size: .9rem;
+  /* text-transform: lowercase; */
+}
+.contact-infor .inforbox .description{padding-top: .4rem; font-size: .8rem}
+.contact-infor .inforbox .description em{
+  display: block;
+  margin-top: .45rem;
+  color: #dfdfdf;
+  font-style: italic;
+}
+.contactform{
+  width: 60%;
+}
+.contactform .caption{
+  width: 100%;
+  margin: 0.15rem;
+  background: rgb(65, 65, 65);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.contactform .caption h3{
+  font-family: ftwo;
+  font-size: .85rem;
+}
+.contactform .caption .choose-option label{
+  font-style: italic;
+}
+.contactform .caption .choose-option select{
+  background: var(--clr-blue);padding: .25rem;
+  border-radius: 5px; font-weight: 500;
+}
+.contactform .caption .choose-option select option{
+  /* border-bottom: 2px solid #fff; */
+  background: #ccc;
+  color: #101010;
+  padding: .5rem 0;
+}
+/* research more on select and options */
+
+
+
+/* ENTRIN FORM INPUTS */
+.form-data{
+  width: 100%;
+  background-color: rgb(65, 65, 65);
+  margin: 0.15rem;
+  color: #fff;
+  padding: .5rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.form-data .form-fields{width: 47%; margin: .25rem}
+.form-data .form-fields span{
+  font-family: ftwo;
+  font-size: .68rem;
+  /* font-weight: 500; */
+}
+::placeholder{color: #ccc; font-style: italic;}
+.form-data input, .form-data textarea{
+  background-color:rgb(77, 77, 77);
+  width: 100%;
+  padding: .25rem;
+  border-radius: 5px;
+}
+.form-fields textarea{
+  height: 100px!important;
+  resize: none;
+}
+.form-data .w-100{
+  width:100%;
+}
+.form-data .form-submit-btn{
+  width: 100px;
+  text-align: center;
+  margin: 0 auto;
+}
+.form-data .form-submit-btn button{
+  background: var(--clr-blue);
+  border-radius: 5px;
+  width: 100%; height: 100%;
+  padding: .5rem 0;
+  font-weight:500;
+  font-family: ftwo;
+  font-size: .65rem;
+}
+.form-data .form-submit-btn button:hover{background-color: var(--clr-accent)}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 558px){
+  .contact-section .contact-content{flex-direction: column;}
+  .form-data{flex-direction: row;}
+  .contactform, .contact-infor{
+    width: 100%;
+  }
+}
+@media (max-width: 280px){
+  .form-data .form-fields{width: 100%; margin: .25rem}
+
+}
+
+
+
+
+
