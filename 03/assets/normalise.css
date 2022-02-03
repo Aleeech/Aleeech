@@ -757,14 +757,14 @@ a{
   z-index: -1;
 }
 .fillHover .triger{
-	z-index: 501;
+	z-index: 2;
 	padding: 35px;
 	cursor: pointer;
 }
 .fillHover .text{
   text-align: center;
   outline-offset: .5rem;
-	z-index: 500;
+	z-index: 1;
   font-weight: bold;
 	text-transform: capitalize;
   transition: outline 800ms cubic-bezier(0.075, 0.82, 0.165, 1), background 200ms ease;
@@ -1107,7 +1107,7 @@ input[type="checkbox"]{display: none}
 .nav-menu{
   opacity: 0;
   transform: scaleX(0);
-  z-index: 2000;
+  z-index: 1000;
   top: 0; right: 0; left: 0; bottom: 0;
   background-color: var(--clr-light);
   overflow: auto;
