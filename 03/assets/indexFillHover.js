@@ -60,16 +60,30 @@ if(currentTheme){
 
 
 
-
-
 // open and close nav menu
 btn.addEventListener("click", openNav)
-btn.addEventListener("mouseenter", openNav)
+btn.addEventListener("mouseenter", deviceCan)
 
 function openNav(){
   navMenu.classList.toggle('open')
   btn.classList.toggle('fa-times')
 }
+function deviceCan() {
+  let maxOver = document.querySelector('header')
+  if(maxOver.offsetWidth > 920){
+    openNav
+  }else{
+    return
+  }
+}
+// open and close nav menu
+// btn.addEventListener("click", openNav)
+// btn.addEventListener("mouseenter", openNav)
+
+// function openNav(){
+//   navMenu.classList.toggle('open')
+//   btn.classList.toggle('fa-times')
+// }
 
 // open and close dropdown nav menu links
 document.querySelector(".cDT").addEventListener("click", _ =>{
