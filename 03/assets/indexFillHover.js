@@ -63,8 +63,8 @@ if(currentTheme){
 
 
 // open and close nav menu
-btn.addEventListener("mouseenter", openNav)
 btn.addEventListener("click", openNav)
+btn.addEventListener("mouseenter", openNav)
 
 function openNav(){
   navMenu.classList.toggle('open')
