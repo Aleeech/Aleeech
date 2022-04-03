@@ -10,13 +10,12 @@
   justify-content: space-around;
 }
 body{
-  width: 80%;
-  padding:20px;
-  margin: auto;
   background: #ccc;
   text-align: center;
 }
 section{
+  overflow: hidden;
+  width: 100%;
   min-height: 20vh;
   border-bottom: 1px solid #ddd;
   margin-bottom: 2rem;
@@ -57,4 +56,11 @@ p{
 .three p,
 .content{
   position: relative;
+}
+@media (max-width: 750px){
+  .flex{
+    flex-direction: column;
+  }
+  .card, .fard{margin: .5rem; width:100%}
+  .sard{padding: 0.25rem}
 }
