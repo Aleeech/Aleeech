@@ -1,0 +1,60 @@
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+.flex{
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+}
+body{
+  width: 80%;
+  padding:20px;
+  margin: auto;
+  background: #ccc;
+  text-align: center;
+}
+section{
+  min-height: 20vh;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+}
+.card{
+  background: #fff;
+  width: 30%;
+  padding: 50px 0;
+}
+p{
+  max-width: 500px;
+  margin: 2rem auto;
+}
+.fard{
+  width: 40%;
+  padding: 50px 0;
+  background-color: #fff;;
+}
+.sard{
+  background:#fff;
+  padding: 2rem;
+  margin: 1rem 0;
+}
+.main{
+  flex-direction: column;
+}
+.one{
+  justify-content: center;
+  height: 100vh;
+}
+/* animation classes */
+.sard,
+.card,
+.three .fard,
+.two h2,
+.three h2,
+.three p,
+.content{
+  position: relative;
+}
